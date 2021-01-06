@@ -1,0 +1,197 @@
+<!-- modales actualizar usuario -->
+<div class="modal fade" id="miModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header  text-center" style="background: palegreen;">
+                <h4 class="modal-title w-100" id="myModalLabel">Actualiza Usuarios</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <form id="form_actualiza_usuario" class="">
+
+
+                    <div class="row">
+
+                        <div class="col-md-6 mb-3">
+                            <label>Nombre:</label>
+                            <input type="text" class="form-control validar_usuario_ac" id="nom_usu_ac" name="nom_usu_ac">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label>Telefono:</label>
+                            <input type="text" class="form-control validar_usuario_ac" id="telf_usu_ac" name="telf_usu_ac">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label>Dirección:</label>
+                            <input type="text" class="form-control validar_usuario_ac" id="dir_usu_ac" name="dir_usu_ac">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label> tipo usuario:</label>
+                            <select name="tipo_usu_ac" id="tipo_usu_ac" class="form-control validar_usuario_ac">
+                                <option value="Administrador">administrador</option>
+                                <option value="Vendedor">Vendedor</option>
+                                <option value="Dueño">Dueño</option>
+                            </select>
+                            <input type="text" class="form-control" hidden name="id_usu_ac" id="id_usu_ac">
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label> Estado:</label>
+
+                            <select class="form-control" name="estado_usu_ac" id="estado_usu_ac">
+                        <option value="1">Activo</option>
+                          <option value="0">Inactivo</option>
+    
+                      </select>
+
+                        </div>
+                    </div>
+
+
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary btn-sm" onclick="actualiza_usuario()">guardar cambios</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- modal actualizar proveedor-->
+
+<div class="modal fade" id="basicExampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center" style="background: palegreen;">
+                <h5 class="modal-title" id="exampleModalLabel">Actualiza proveedor</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+            </div>
+            <div class="modal-body">
+
+                <div class="form-outline">
+                    <input type="number" id="id_pro" hidden class="form-control" value="" name="id_p"><br>
+                    <!-- Nombre Proveedor -->
+                    <div class="form-outline">
+                        <label class="form-label" for="form1">Nombre Proveedor</label>
+                        <input type="text" id="nombre_pro" class="form-control" value="" name="nombrep"><br>
+                    </div>
+                    <!-- Direccion Proveedor -->
+                    <div class="form-outline">
+                        <label class="form-label" for="form1">Direccion Proveedor</label>
+                        <input type="text" id="direccion_pro" class="form-control" placeholder="" value="" name="direccionp">
+                    </div>
+                    <!-- Numero de Telefono -->
+                    <div class="form-outline">
+                        <label class="form-label" for="form1">Numero de Telefono</label>
+                        <input type="number" id="telefono_pro" class="form-control" placeholder="" name="numerop">
+                    </div>
+                    <!-- Tipo de Documento -->
+                    <label>Tipo de documento</label>
+                    <select class="mdb-select form-control" id="tipodoc_pro">
+  <option value="" disabled selected>Tipo de documento</option>
+  <option value="DNI">DNI</opti	on>
+  <option value="CEDULA">CEDULA</option>
+  <option value="RUC">RUC</option>
+
+</select>
+                    <!-- Numero de documento -->
+                    <div class="form-outline">
+                        <label class="form-label" for="form1">Numero de documento</label>
+                        <input type="number" id="numerodoc_pro" class="form-control" placeholder="" value="" name="numerod">
+                    </div>
+                    <div class="form-outline">
+                        <label class="form-label" for="form1">estado </label>
+                        <select class="mdb-select form-control" id="estado_pro">
+  <option value="1" >Activo</option>
+  <option value="0" >Inactivo</option>
+
+
+</select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Cancelar</button>
+                    <button type="button" onclick="actualizar()" class="btn btn-info btn-sm">Actualizara</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-------------------------------producto------------------------
+
+<div class="modal fade" id="modal-add-product" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header" style="background: palegreen;">
+                <h5 class="modal-title" id="modal-title">Registrar Producto</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+            </div>
+            <div class="modal-body">
+                <form id="form-add-product">
+                    <input type="text" class="form-control" id="id" name="id" placeholder="" hidden>
+                    <div class="row">
+                        <div class="col-6 form-group">
+                            <label>Nombre</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="">
+                        </div>
+                        <div class="col-6 form-group">
+                            <label>Cantidad</label>
+                            <input type="number" class="form-control" id="cantidad" name="cantidad" placeholder="">
+                        </div>
+                        <div class="col-6 form-group">
+                            <label>Categoria</label>
+                            <select class="form-control" id="categoria" name="categoria">
+                      </select>
+                        </div>
+                        <div class="col-6 form-group">
+                            <label>Precio</label>
+                            <input type="munber" class="form-control" id="precio" name="precio" placeholder="">
+                        </div>
+                        <div class="col-6 form-group">
+                            <label>Proveedor</label>
+                            <select class="form-control" id="proveedor" name="proveedor">
+                      </select>
+                        </div>
+                        <div class="col-6 form-group">
+                            <label>Estado</label>
+
+                            <select class="form-control" id="estado" name="estado">
+                        <option value="1">Activo</option>
+                        <option value="0">Inactivo</option>
+                      </select>
+                        </div>
+
+                        <div class="col-6 form-group">
+                            <label>Vencimiento</label>
+                            <input type="date" class="form-control" id="vencimiento" name="vencimiento" placeholder="">
+                        </div>
+                        <div class="col-6 form-group">
+                            <label>Descripción</label>
+                            <textarea name="descripcion" id="descripcion" cols="30" rows="2" class="form-control"></textarea>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" id="btnSave">Agregar</button>
+            </div>
+        </div>
+    </div>
+</div> --->
